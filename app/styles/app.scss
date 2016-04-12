@@ -1,41 +1,6 @@
-.navbar {
-  a {
-    padding: 20px;
-  }
-}
+@import "variables";
+@import "mixins";
+@import "extends";
 
-.original-post {
-  border: 2px solid red;
-  width: 700px;
-  height: 500px;
-  margin: 20px;
-}
-
-.edit-post {
-  border: 2px solid green;
-  width: 500px;
-  height: 500px;
-  margin: 20px;
-}
-
-.reviews {
-  border: 2px solid blue;
-  width: 500px;
-  height: 200px;
-  margin: 20px;
-}
-
-.post-tile {
-  border: 2px solid pink;
-}
-
-.admin-tile {
-  border: 2px solid olive;
-  height: 200px;
-}
-
-.profile-posts {
-  border: 2px solid deeppink;
-  width: 300px;
-  height: 300px;
-}
+@import "layout/index";
+@import "components/index";

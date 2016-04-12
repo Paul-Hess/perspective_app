@@ -3,9 +3,14 @@
 <div class="navbar">
   {{#link-to 'index'}}home{{/link-to}}
   {{#link-to 'login'}}log in{{/link-to}}
-  {{#link-to 'admin'}}admin{{/link-to}}
   {{#link-to 'profile'}}profile{{/link-to}}
 </div>
 
 
 {{outlet}}
+
+<footer>
+  <hr>
+  {{#link-to 'admin'}}admin{{/link-to}}
+  ReDidIt 2016 &copy;
+</footer>
