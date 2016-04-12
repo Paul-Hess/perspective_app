@@ -1,4 +1,18 @@
+.adminContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .admin-tile {
   border: 2px solid olive;
-  height: 200px;
+  margin: 3%;
+  img{
+    height: 300px;
+    margin: auto;
+    display: block;
+  }
+  .adminBtns {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
