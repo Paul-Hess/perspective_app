@@ -1,3 +1,6 @@
 <h1>Admin</h1>
 
-{{admin-tile}}
+
+{{#each model as |post|}}
+{{admin-tile post=post deletePost="deletePost"}}
+{{/each}}
