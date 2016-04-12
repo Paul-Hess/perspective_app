@@ -3,6 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
 	img: DS.attr(),
 	description: DS.attr(),
+	medium: DS.attr(),
 	user: DS.belongsTo('user', {async: true}),
 	category: DS.belongsTo('category', {async: true}),
 	// need to cross out until this functionality is set up, right now it's breaking the code due to the hasMan having nothing. remember to add back into post.json file as well.

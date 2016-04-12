@@ -1,9 +1,15 @@
 
 .original-post {
+  display: flex;
   border: 2px solid red;
-  width: 700px;
-  height: 500px;
   margin: 20px;
+  img {
+    justify-content: center;
+  }
+  .postNotes {
+    display: block;
+    margin: 3%;
+  }
 }
 
 .edit-post {
