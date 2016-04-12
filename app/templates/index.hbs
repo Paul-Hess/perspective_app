@@ -1,7 +1,7 @@
 <h1>Index</h1>
 
 <div class="post-tile">
-  {{#link-to 'post'}}post tile{{/link-to}}
+  {{#each model as |post|}}
+    {{post-tile post=post}}
+  {{/each}}
 </div>
-
-{{outlet}}

@@ -1,3 +1,12 @@
 <h1>Admin</h1>
 
-{{admin-tile}}
+Users
+{{#each model as |user|}}
+{{admin-user user=user deleteUser="deleteUser"}}
+{{/each}}
+
+<div class="adminContainer">
+  {{#each model as |post|}}
+  {{admin-tile post=post deletePost="deletePost"}}
+  {{/each}}
+</div>
