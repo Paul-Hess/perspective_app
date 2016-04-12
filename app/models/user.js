@@ -7,6 +7,7 @@ export default DS.Model.extend({
 	email: DS.attr(),
 	createdAt: DS.attr(),
 	updatedAt: DS.attr(),
+	isAdmin: DS.attr(),
 	posts: DS.hasMany('post', {async: true}),
 	responses: DS.hasMany('response', {async: true})
 });

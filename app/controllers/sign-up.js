@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import moment from 'moment';
 var ref = new Firebase("https://imitatir.firebaseio.com/");
 
 export default Ember.Controller.extend({
@@ -18,16 +19,18 @@ export default Ember.Controller.extend({
               userName: this.get('userName') || '',
               email: this.get('email') || '',
               firstName: this.get('firstName') || '',
-              lastName: this.get('lastName') || ''
+              lastName: this.get('lastName') || '',
+              createdAt: this.set('createdAt', moment().format('LL')),
+              updatedAt: this.set('updatedAt', moment().format('LL')),
+              isAdmin: this.set('isAdmin', false),
             });
-            debugger;
             controller.set('email', null);
             controller.set('password', null);
             controller.set('passwordCheck', null);
             controller.set('userName', null);
             controller.set('firstName', null);
             controller.set('lastName', null);
-            controller.transitionToRoute('index');
+            controller.transitionToRoute('sign-in');
           }
         });
       } else {
