@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('login');
   this.route('admin');
   this.route('profile');
-  this.route('post');
+  this.route('post', {path: '/post/:post_id'});
 });
 
 export default Router;

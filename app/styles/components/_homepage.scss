@@ -1,3 +1,11 @@
 .post-tile {
-  border: 2px solid pink;
+  display: flex;
+  padding: 5px;
+  img {
+    height: 200px;
+    margin: 4px;
+    &:hover {
+      outline: 5px solid mediumturquoise;
+    }
+  }
 }
