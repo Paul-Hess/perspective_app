@@ -1,5 +1,10 @@
 <h1>Admin</h1>
 
+Users
+{{#each model as |user|}}
+{{admin-user user=user deleteUser="deleteUser"}}
+{{/each}}
+
 <div class="adminContainer">
   {{#each model as |post|}}
   {{admin-tile post=post deletePost="deletePost"}}

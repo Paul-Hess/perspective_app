@@ -8,5 +8,8 @@ export default Ember.Route.extend({
     deletePost(post) {
       post.destroyRecord();
     }
+  },
+  deleteUser(user) {
+    user.destroyRecord();
   }
 });
