@@ -1,7 +1,11 @@
-<h1>Index</h1>
-
-<div class="post-tile">
-  {{#each model as |post|}}
+<div id="welcome" class="content">
+  <h1 class="brand">reDidIt</h1>
+  <a id="link-index" href="#postList">\/</a>
+</div>
+<div id="postList" class="panel">
+  <div class="content">
+    {{#each model as |post|}}
     {{post-tile post=post}}
-  {{/each}}
+    {{/each}}
+  </div>
 </div>
