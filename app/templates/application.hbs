@@ -10,7 +10,7 @@
       {{#link-to 'index'}}home{{/link-to}}
       {{#if session.isAuthenticated}}
       {{#link-to 'profile' session.uid}}profile{{/link-to}}
-      <button {{action 'signOut'}}>{{fa-icon 'sign-out'}} sign out</button>
+      <a {{action 'signOut'}}>sign out</a>
       {{else}}
       {{#link-to 'sign-in'}}sign in{{/link-to}}
       {{#link-to 'sign-up'}}sign up{{/link-to}}

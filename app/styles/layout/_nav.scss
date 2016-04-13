@@ -25,12 +25,18 @@ header {
       font-size: 3em;
     }
   }
+
   .navbar {
     margin: 5px 0;
     font-size: 1.25em;
     button {
       display: inline;
       margin: 10px;
+    }
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
