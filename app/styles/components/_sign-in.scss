@@ -1,3 +1,17 @@
+.sign-in {
+  background: url("https://static.pexels.com/photos/47482/pexels-photo-47482.jpeg") center center;
+  background-size: cover;
+  opacity: 0.8;
+  height: 70vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: white;
+  }
+}
+
 .sign {
   text-align: center;
   color: $text_color;
