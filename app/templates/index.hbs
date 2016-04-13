@@ -1,11 +1,11 @@
-<div id="welcome" class="content">
+<!-- <div id="welcome" class="content">
   <h1 class="brand">reDidIt</h1>
-  <a id="link-index" href="#postList">\/</a>
+  <a id="link-index" href="#postList"><i class="fa fa-caret-down fa-2x"></i></a>
 </div>
+  <a id="link-index" href="#postList">\/</a>
+</div> -->
 <div id="postList" class="panel">
-  <div class="content">
     {{#each model as |post|}}
-    {{post-tile post=post}}
+      {{post-tile post=post}}
     {{/each}}
-  </div>
 </div>
