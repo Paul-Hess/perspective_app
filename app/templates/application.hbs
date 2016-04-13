@@ -3,7 +3,7 @@
 <div class="navbar">
   {{#link-to 'index'}}home{{/link-to}}
   {{#if session.isAuthenticated}}
-    {{#link-to 'profile'}}profile{{/link-to}}
+    {{#link-to 'profile' session.uid}}profile{{/link-to}}
     <button {{action 'signOut'}}>{{fa-icon 'sign-out'}} sign out</button>
   {{else}}
     {{#link-to 'sign-in'}}sign in{{/link-to}}

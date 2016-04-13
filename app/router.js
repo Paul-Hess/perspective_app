@@ -7,10 +7,10 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('admin');
-  this.authenticatedRoute('profile');
+  this.authenticatedRoute('profile', {path: 'profile/:user_id'});
   this.route('sign-up');
   this.route('sign-in');
-  this.route('post', {path: '/post/:post_id'});
+  this.route('post', {path: 'post/:post_id'});
 });
 
 export default Router;
