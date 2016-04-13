@@ -6,6 +6,8 @@ blurb about user
   hey i'm a profile post. i hold a smaller version of the art with a blurb about it and what i'm looking for from a collaborator.
 </div>
 
+
+
 {{#if model.owner}}
-  {{new-post}}
+	{{post-form savePost='savePost' user=model.user}}
 {{/if}}
