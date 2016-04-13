@@ -1,33 +1,31 @@
 <div class="container">
+  <header>
+    <div class="social">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </div>
+    {{#link-to 'index'}}<h2 id="title">reDidIt</h2>{{/link-to}}
+    <div class="navbar">
+      {{#link-to 'index'}}home{{/link-to}}
+      {{#if session.isAuthenticated}}
+      {{#link-to 'profile' session.uid}}profile{{/link-to}}
+      <button {{action 'signOut'}}>{{fa-icon 'sign-out'}} sign out</button>
+      {{else}}
+      {{#link-to 'sign-in'}}sign in{{/link-to}}
+      {{#link-to 'sign-up'}}sign up{{/link-to}}
+      {{/if}}
+    </div>
+  </header>
 
 
-<header>
-  <div class="social">
-    <i class="fa fa-facebook" aria-hidden="true"></i>
-    <i class="fa fa-twitter" aria-hidden="true"></i>
-    <i class="fa fa-instagram" aria-hidden="true"></i>
+  <div class="wrapper">
+    {{outlet}}
   </div>
-  {{#link-to 'index'}}<h2 id="title">reDidIt</h2>{{/link-to}}
-  <div class="navbar">
-    {{#link-to 'index'}}home{{/link-to}}
-    {{#if session.isAuthenticated}}
-    {{#link-to 'profile' session.uid}}profile{{/link-to}}
-    <button {{action 'signOut'}}>{{fa-icon 'sign-out'}} sign out</button>
-    {{else}}
-    {{#link-to 'sign-in'}}sign in{{/link-to}}
-    {{#link-to 'sign-up'}}sign up{{/link-to}}
-    {{/if}}
-  </div>
-</header>
 
-
-<div class="wrapper">
-  {{outlet}}
-</div>
-
-<footer>
-  <hr>
-  {{#link-to 'admin'}}admin{{/link-to}}
-  ReDidIt 2016 &copy;
-</footer>
+  <footer>
+    <hr>
+    {{#link-to 'admin'}}admin{{/link-to}}
+    ReDidIt 2016 &copy;
+  </footer>
 </div>

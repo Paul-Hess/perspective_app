@@ -54,26 +54,55 @@
 
 #postList {
 	display: flex;
-	border: 1px solid red;
+	flex-flow: column;
 	@media screen and (min-width: 768px) {
+		flex-flow: row wrap;
 		justify-content: space-around;
 	}
 	a {
 		display: flex;
 		@media screen and (min-width: 768px) {
 			flex-flow: row wrap;
+			position: relative;
+			height: 300px;
+			margin: 5px;
+			align-self: center;
+			align-items:center;
 		}
 	}
-	img {
-		max-width: 100%;
-		max-height: 300px;
-		margin: 10px auto;
-		align-self: center;
-		@media screen and (min-width: 768px) {
-			height: 400px;
-			margin: 5px;
-			border: 1px solid yellow;
+	.post-detail {
+		img {
+			max-width: 100%;
+			max-height: 300px;
+			margin: 10px auto;
 			align-self: center;
 		}
+		.post-thumbnail {
+
+			@media screen and (min-width: 768px) {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				font-size: 2em;
+				color: white;
+				transition: opacity 0.6s ease-in-out;
+				background-color: rgba(63, 191, 191, 0.7);
+				&:hover {
+					transition: opacity 0.5s ease-in-out;
+					background-color: rgba(63, 191, 191, 0.7);
+					visibility: visible;
+    			opacity: 1;
+					font-size: 2em;
+					color: white;
+				}
+			}
+		}
+
 	}
 }
