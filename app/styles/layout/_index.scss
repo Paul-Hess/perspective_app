@@ -50,7 +50,17 @@
 	justify-content: center;
 	align-items: center;
 	border: 1px solid red;
-  h1 {
+}
 
+#postList {
+	display: flex;
+	a {
+		display: flex;
+	}
+	img {
+		max-width: 100%;
+		max-height: 300px;
+		margin: 10px auto;
+		align-self: center;
 	}
 }

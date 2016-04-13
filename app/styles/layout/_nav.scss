@@ -3,11 +3,10 @@ header {
   flex-flow: column;
   align-items: center;
   border-bottom: 1px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   .social {
     display: flex;
     justify-content: flex-end;
-    border: 1px solid red;
     width: 100%;
     i {
       padding: 0 10px;
@@ -29,7 +28,7 @@ header {
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 20px;
   text-align: center;
   a {
     padding: 3px;
