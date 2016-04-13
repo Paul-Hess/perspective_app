@@ -21,16 +21,25 @@ header {
     font-size: 2em;
     margin: 15px;
     margin-bottom: 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 5px;
+    font-style: italic;
     @media screen and (min-width: 768px) {
       font-size: 3em;
     }
   }
+
   .navbar {
     margin: 5px 0;
     font-size: 1.25em;
     button {
       display: inline;
       margin: 10px;
+    }
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -43,5 +52,8 @@ footer {
     display: block;
     @extend %aTagNav;
     font-size: 1.25em;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

@@ -5,12 +5,13 @@
       <i class="fa fa-twitter" aria-hidden="true"></i>
       <i class="fa fa-instagram" aria-hidden="true"></i>
     </div>
-    {{#link-to 'index'}}<h2 id="title">reDidIt</h2>{{/link-to}}
+    {{#link-to 'index'}}<h2 id="title">perspective</h2>{{/link-to}}
     <div class="navbar">
       {{#link-to 'index'}}home{{/link-to}}
+      {{#link-to 'about'}}about{{/link-to}}
       {{#if session.isAuthenticated}}
       {{#link-to 'profile' session.uid}}profile{{/link-to}}
-      <button {{action 'signOut'}}>{{fa-icon 'sign-out'}} sign out</button>
+      <a {{action 'signOut'}}>sign out</a>
       {{else}}
       {{#link-to 'sign-in'}}sign in{{/link-to}}
       {{#link-to 'sign-up'}}sign up{{/link-to}}

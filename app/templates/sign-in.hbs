@@ -1,11 +1,13 @@
-<h1 class="sign">Sign In</h1>
+<div class="sign-in">
+  <h1 class="sign">Sign In</h1>
 
-{{input type='text' value=email placeholder='email'}}
-{{input type='password' value=password placeholder='password'}}
-{{#if session.isWorking}}
+  {{input type='text' value=email placeholder='email'}}
+  {{input type='password' value=password placeholder='password'}}
+  {{#if session.isWorking}}
   <button disabled="disabled">{{fa-icon 'spinner' spin=true}} Signing in... </button>
-{{else}}
+  {{else}}
   <button class='btn btn-default' {{action 'signIn' 'password'}}>
     {{fa-icon 'sign-in'}} Sign In
   </button>
-{{/if}}
+  {{/if}}
+</div>
