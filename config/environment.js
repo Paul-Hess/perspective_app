@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'redidit',
-    environment: environment,
+    environment: "development",
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
     firebase: 'https://imitatir.firebaseio.com/',
     torii: { sessionServiceName: 'session' },
@@ -23,6 +23,8 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
+    ENV.AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
