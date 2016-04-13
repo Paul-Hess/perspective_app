@@ -1,6 +1,30 @@
-.navbar {
+header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid red;
+    width: 100%;
+    i {
+      padding: 0 10px;
+      color: $nav-color;
+    }
+  }
   a {
     padding: 20px;
+    @extend %aTagNav;
+  }
+  #title {
+    font-size: 3em;
+    margin: 15px;
+  }
+  .navbar {
+    margin: 5px 0;
+    font-size: 1.25em;
   }
 }
 
@@ -10,5 +34,7 @@ footer {
   a {
     padding: 3px;
     display: block;
+    @extend %aTagNav;
+    font-size: 1.25em;
   }
 }
