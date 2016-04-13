@@ -1,18 +1,11 @@
-import Uploader from 'npm:s3-image-uploader';
+
 import EmberUploader from 'ember-uploader';
 import config from '../config/environment';
 import AWS from 'npm:aws-sdk';
 import Ember from 'ember';
 
 export default EmberUploader.FileField.extend({
-	filesDidChange: function(files) {
-    const uploader = EmberUploader.Uploader.create({
-      url: this.get('url')
-    });
-
-
-
-    var reader = new FileReader();
+	filesDidChange: function() {
 
     var file = event.target.files[0];
     var size = file.size;
@@ -25,16 +18,6 @@ export default EmberUploader.FileField.extend({
 			secretAccessKey: config.AWS_SECRET_ACCESS_KEY,
 			region: 'us-west-2'
 		});	
-
-		var uploader2 = new Uploader({
-		  aws : {
-		    key : config.AWS_ACCESS_KEY_ID,
-		    secret : config.AWS_SECRET_ACCESS_KEY
-		  },
-		  websocketServer : server,
-		  websocketServerPort : 3004,
-		});
-
 
 		var s3 = new AWS.S3();
 		var params = {
