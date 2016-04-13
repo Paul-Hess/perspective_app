@@ -11,11 +11,8 @@ Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
   this.route('post', {path: 'post/:post_id'});
-<<<<<<< HEAD
   this.route('uploads');
-=======
   this.route('about');
->>>>>>> gracieStyles
 });
 
 export default Router;
