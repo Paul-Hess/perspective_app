@@ -1,0 +1,14 @@
+$text-color: #aaa;
+
+$nav-color: #444;
+
+
+%aTagNav {
+  text-decoration: none;
+  color: $nav-color;
+}
+
+%aTag {
+  text-decoration: none;
+  color: $text-color;
+}
