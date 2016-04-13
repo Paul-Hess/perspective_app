@@ -1,0 +1,23 @@
+.sign {
+  text-align: center;
+  color: $text_color;
+}
+input {
+  display: block;
+  margin: 5px auto;
+  width: 90%;
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 5px;
+  @media screen and (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+button {
+  @extend %button;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: block;
+  margin: 25px auto;
+}
