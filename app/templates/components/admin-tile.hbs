@@ -1,8 +1,12 @@
-<h3>list all posts</h3>
 
 <div class="admin-tile">
-  post details <br>
-  <button>delete user</button> <br>
-  <button>delete post</button> <br>
-  <button>delete comments</button> <br>
+  NOTE: user and catagory not appearing until the hasMany relationships are established. <br>
+
+  User: {{post.user}} <br>
+  Art Type: {{post.category}} <br>
+  Art: <br>
+  <img src={{post.img}} alt={{post.description}}><br>
+  <div class="adminBtns">
+    <button {{action 'deletePost' post}}>delete post</button>
+  </div>
 </div>

@@ -2,10 +2,21 @@
 
 <div class="navbar">
   {{#link-to 'index'}}home{{/link-to}}
-  {{#link-to 'login'}}log in{{/link-to}}
-  {{#link-to 'admin'}}admin{{/link-to}}
-  {{#link-to 'profile'}}profile{{/link-to}}
+  {{#if session.isAuthenticated}}
+    {{#link-to 'profile' session.uid}}profile{{/link-to}}
+    <button {{action 'signOut'}}>{{fa-icon 'sign-out'}} sign out</button>
+  {{else}}
+    {{#link-to 'sign-in'}}sign in{{/link-to}}
+    {{#link-to 'sign-up'}}sign up{{/link-to}}
+  {{/if}}
 </div>
 
+<div class="wrapper">
+  {{outlet}}
+</div>
 
-{{outlet}}
+<footer>
+  <hr>
+  {{#link-to 'admin'}}admin{{/link-to}}
+  ReDidIt 2016 &copy;
+</footer>
