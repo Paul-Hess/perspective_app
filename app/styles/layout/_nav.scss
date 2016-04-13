@@ -14,12 +14,13 @@ header {
     }
   }
   a {
-    padding: 20px;
+    padding: 10px;
     @extend %aTagNav;
   }
   #title {
     font-size: 2em;
     margin: 15px;
+    margin-bottom: 0px;
     @media screen and (min-width: 768px) {
       font-size: 3em;
     }
@@ -27,6 +28,9 @@ header {
   .navbar {
     margin: 5px 0;
     font-size: 1.25em;
+    button {
+      display: inline;
+    }
   }
 }
 
