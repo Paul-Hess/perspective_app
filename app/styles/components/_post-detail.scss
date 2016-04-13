@@ -4,6 +4,9 @@
   flex-flow: column;
   border: 2px solid red;
   width: 98vw;
+  @media screen and (min-width: 800px)  {
+    flex-flow: row;
+  }
   img {
     // justify-content: center;
     width: 100vw;
@@ -14,6 +17,10 @@
     margin: 5px;
     p{
       margin: 5px;
+    }
+    @media screen and (min-width: 800px)  {
+      border: 1px solid yellow;
+      width: 250px;
     }
   }
 }
