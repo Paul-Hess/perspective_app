@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('post', {path: 'post/:post_id'});
   this.route('uploads');
   this.route('about');
+  this.route('welcome');
 });
 
 export default Router;

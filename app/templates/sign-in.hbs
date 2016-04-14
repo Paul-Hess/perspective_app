@@ -1,7 +1,7 @@
 
 <div class="sign-in">
-  <h1 class="sign">Sign In</h1>
   <form>
+    <h1 class="sign">Sign In</h1>
 
     {{input type='text' value=email placeholder='email'}}
     {{input type='password' value=password placeholder='password'}}
@@ -12,10 +12,6 @@
     <button class='btn btn-default' {{action 'signIn' 'password'}}>
       {{fa-icon 'sign-in'}} Sign In
     </button>
-    {{/if}}
-      <button class='btn btn-default' {{action 'signIn' 'password'}}>
-        {{fa-icon 'sign-in'}} Sign In
-      </button>
     {{/if}}
   </form>
 </div>
