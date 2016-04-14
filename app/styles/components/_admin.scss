@@ -1,18 +1,39 @@
 .adminContainer {
   display: flex;
-  justify-content: center;
-}
-
-.admin-tile {
-  border: 2px solid olive;
-  margin: 3%;
-  img{
-    height: 300px;
-    margin: auto;
-    display: block;
+  flex-flow: column;
+  width: 100vw;
+  align-items: center;
+  align-content: center;
+  margin: 0;
+  min-width: 320px;
+  @media screen and (min-width: 768px){
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
   }
-  .adminBtns {
-    display: flex;
-    justify-content: center;
+  .admin-tile {
+    border: 2px solid olive;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 300px;
+    padding: 15px 15px 5px 15px;
+    @media screen and (min-width: 768px){
+      margin: 5px;
+    }
+
+    img{
+      height: 175px;
+      max-width: 100%;
+      margin: 15px auto 0px auto;
+      display: block;
+    }
+    .adminBtns {
+      display: flex;
+      justify-content: center;
+      button {
+        margin: 0;
+      }
+    }
   }
 }
