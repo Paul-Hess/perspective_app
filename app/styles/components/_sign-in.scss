@@ -1,15 +1,25 @@
 .sign-in {
+  margin-top: -200px;
   background: url("https://static.pexels.com/photos/47482/pexels-photo-47482.jpeg") center center;
   background-size: cover;
+  background-attachment: fixed;
   opacity: 0.8;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  h1 {
-    color: white;
+  overflow: hidden;
+  @media screen and (min-width: 350px ) {
+    margin-top: -225px;
   }
+  form {
+    margin: 200px auto 0 auto;
+    h1 {
+      color: white;
+    }
+  }
+
 }
 
 .sign {
@@ -18,11 +28,12 @@
 }
 form {
   width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-  background: rgba(204, 204, 204, 0.1);
+  padding: 15px 0;
+  background: rgba(204, 204, 204, 0.4);
   max-width: 600px;
-  input {
+  border: 1px solid pink;
+  input,
+  textarea {
     display: block;
     margin: 5px auto;
     width: 90%;
@@ -32,11 +43,9 @@ form {
     padding: 15px;
     @media screen and (min-width: 768px) {
       width: 50%;
-
     }
   }
 }
-
 button {
   @extend %button;
   font-size: 15px;
