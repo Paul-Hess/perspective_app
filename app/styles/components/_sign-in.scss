@@ -16,15 +16,24 @@
   text-align: center;
   color: $text_color;
 }
-input {
-  display: block;
-  margin: 5px auto;
-  width: 90%;
-  border: 1px solid black;
-  font-size: 15px;
-  padding: 5px;
-  @media screen and (min-width: 768px) {
-    width: 50%;
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+  background: rgba(204, 204, 204, 0.1);
+  max-width: 600px;
+  input {
+    display: block;
+    margin: 5px auto;
+    width: 90%;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    font-size: 15px;
+    padding: 15px;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+
+    }
   }
 }
 

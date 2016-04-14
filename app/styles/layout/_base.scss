@@ -8,8 +8,14 @@
   }
 }
 
+.content {
+  min-width: 300px;
+}
 body {
   color: $text-color;
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
 }
 
 h1 {

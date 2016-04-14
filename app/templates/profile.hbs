@@ -1,2 +1,3 @@
-I'm the profile page
-{{outlet}}
+{{#if model.owner}}
+	{{post-form savePost='savePost' user=model.user}}
+{{/if}}
