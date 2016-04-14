@@ -3,15 +3,19 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 			selection: '',
 	    fileLocation: '',
+	    key: '',
       postForm: false,
       actions: {
-	      setFileLocation(data) {
-		      this.set('fileLocation', data);
+	      setFileLocation(params2) {
+	      	console.log(params2);
+		      this.set('fileLocation', params2.fileLocation);
+		      this.set('key', params2.key);
 		      this.set('postForm', true);
 	    		},
 		    savePost() {
 		      var params = {
 		        user:  this.get('user'),
+		        key: this.get('key'),
 		        title: this.get('title'),
 		        description: this.get('description'),
 		        category: this.get('selection'),

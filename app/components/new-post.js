@@ -33,10 +33,16 @@ export default EmberUploader.FileField.extend({
 				  Expires:  new Date(Date.now() + 160000),
 				  StorageClass: 'STANDARD'
 				};
+
+			
 				s3.upload(params, function(err, data) {
 				  if(err) {console.log(err, err.stack); } // an error occurred
 				  else    { console.log(data);
-						self.sendAction('setFileLocation', data.Location);
+				  		var params2 = {
+								fileLocation: data.Location,
+								key: data.key
+							}
+						self.sendAction('setFileLocation', params2);
 				  }           // successful response
 
 				});
