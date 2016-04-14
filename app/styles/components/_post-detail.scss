@@ -1,16 +1,20 @@
 
 .original-post {
+  margin-top: 25px;
   display: flex;
   flex-flow: column;
-  // border: 2px solid red;
+  border: 1px solid red;
+  margin: 25px auto 0 auto;
   width: 98vw;
+  max-width: 1300px;
   @media screen and (min-width: 800px)  {
     flex-flow: row;
+    width: 100%;
+    justify-content: space-around;
   }
   img {
     width: 100%;
     height: auto;
-    // max-height: 200px;
     max-width: 800px;
   }
   .postNotes {
@@ -19,30 +23,45 @@
     padding: 0 5px;
     p {
       margin: 5px;
+      border: 1px solid red;
+      @media  screen and (min-width: 800px) {
+        margin-top: 15px;
+      }
     }
     @media screen and (min-width: 800px)  {
       border: 1px solid yellow;
-      width: 250px;
+      width: 300px;
     }
   }
-}
-
-.edit-post {
-  border: 2px solid green;
-  width: 500px;
-  height: 500px;
-  margin: 20px;
 }
 
 .reviews {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
+  border: 2px solid blue;
+  width: auto;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 5px;
+  .review-detail {
+    border: 1px solid pink;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}
+
+.edit-post {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
   @media screen and (min-width: 768px) {
     flex-flow: row wrap;
   }
-  .review-detail {
-    border: 2px solid blue;
+  .edit-detail {
+    border: 2px solid green;
     height: 250px;
     width: auto;
     margin: 20px;
