@@ -13,17 +13,20 @@ header {
       color: $nav-color;
     }
   }
+
   a {
     padding: 10px;
     @extend %aTagNav;
   }
+
   #title {
     font-size: 2em;
     margin: 15px;
     margin-bottom: 0px;
     font-family: 'Open Sans Condensed', sans-serif;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
     font-style: italic;
+    text-decoration: underline;
     @media screen and (min-width: 768px) {
       font-size: 3em;
     }
@@ -42,6 +45,10 @@ header {
       }
     }
   }
+}
+
+.active {
+  text-decoration: underline;
 }
 
 footer {
