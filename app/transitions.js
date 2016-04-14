@@ -1,9 +1,12 @@
 export default function(){
   this.transition(
-    this.toRoute('index'),
-    this.toRoute('sign-up'),
-    this.toRoute('sign-in'),
-    this.toRoute('about'),
-    this.useAndReverse('fade', { duration: 1000 })
+    this.fromRoute('sign-up'),
+    this.fromRoute('sign-in'),
+    this.fromRoute('about'),
+    this.use('toUp', { duration: 1000 })
+  )
+  this.transition(
+    this.fromRoute('index'),
+    this.use('fade', { duration: 1000 })
   );
 }
