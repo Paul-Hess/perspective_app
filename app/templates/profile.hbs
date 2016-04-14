@@ -1,12 +1,2 @@
-{{profile-about user=model.user}}
-<div class="profile-posts">
-  {{#each model as |user|}}
-    {{profile-post-tile post=model.user}}
-  {{/each}}
-</div>
-
-
-
-{{#if model.owner}}
-	{{post-form savePost='savePost' user=model.user}}
-{{/if}}
+I'm the profile page
+{{outlet}}
