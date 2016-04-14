@@ -13,7 +13,7 @@
   <ul>
     {{#each post.comments as |comment|}}
       <div class="comment">
-        {{comment.user.userName}}: {{comment.body}}
+        <span class="userName">{{comment.user.userName}}</span>: {{comment.body}}
       </div>
     {{/each}}
   </ul>

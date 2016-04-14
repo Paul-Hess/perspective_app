@@ -1,0 +1,25 @@
+.edit-post {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  @media screen and (min-width: 768px) {
+    flex-flow: row wrap;
+  }
+  .edit-detail {
+    border: 2px solid green;
+    height: 250px;
+    width: auto;
+    margin: 20px;
+    @media screen and (min-width: 400px) {
+      width: auto;
+      height: 300px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 300px;
+      // height: auto; this will be auto when it is imgs.
+      height: 300px;
+    }
+  }
+}
