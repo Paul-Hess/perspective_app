@@ -1,14 +1,27 @@
 
 .original-post {
   display: flex;
+  flex-flow: column;
   border: 2px solid red;
-  margin: 20px;
+  width: 98vw;
+  @media screen and (min-width: 800px)  {
+    flex-flow: row;
+  }
   img {
-    justify-content: center;
+    // justify-content: center;
+    width: 100vw;
+    height: auto;
+    max-width: 800px;
   }
   .postNotes {
-    display: block;
-    margin: 3%;
+    margin: 5px;
+    p{
+      margin: 5px;
+    }
+    @media screen and (min-width: 800px)  {
+      border: 1px solid yellow;
+      width: 250px;
+    }
   }
 }
 
