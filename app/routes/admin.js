@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('post');
-    return this.store.findAll('user');
+    return Ember.RSVP.hash({
+      post: this.store.findAll('post'),
+      user: this.store.findAll('user')
+    });
+
   },
   actions: {
     deletePost(post) {
