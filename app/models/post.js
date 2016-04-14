@@ -9,6 +9,6 @@ export default DS.Model.extend({
 	category: DS.belongsTo('category', {async: true}),
 	// need to cross out until this functionality is set up, right now it's breaking the code due to the hasMan having nothing. remember to add back into post.json file as well.
 	// responses: DS.hasMany('response', {async: true}),
-	// comments: DS.hasMany('comment', {async: true}),
+	comments: DS.hasMany('comment', {async: true}),
 	voteTally: DS.attr()
 });
