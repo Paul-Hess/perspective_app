@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       user: this.store.findRecord('user', this.get('session').get('uid')),
       post: this.store.findRecord('post', params.post_id)
-    })
+    });
   },
   actions: {
     saveReview3(params) {
