@@ -1,22 +1,15 @@
 {{new-post  user=user setFileLocation='setFileLocation'}}
+
 {{#if postForm}}
 
-    <label for="title">title</label>
-    {{input type='text' value=title}}
+  <label for="title">title</label>
+  {{input type='text' value=title}}
 
-	  <label for="description">description</label>
-	  {{input type='text' value=description}}
+  <label for="description">description</label>
+  {{input type='text' value=description}}
 
-    <label for="medium">medium</label>
-    {{input type='text' value=medium}}
-
-
-  {{#each category as |category|}}
-		{{category.title}}
-  {{/each}}
-
-
-
+  <label for="medium">medium</label>
+  {{input type='text' value=medium}}
 
   <label for="category">categories</label>
   {{#x-select value="paintings" action="selectCategory"}}
@@ -29,6 +22,6 @@
 		{{#x-option value="written"}}poetry and prose{{/x-option}}
 	{{/x-select}}
 
-
   <button {{action 'savePost'}}>Save</button>
+
 {{/if}}

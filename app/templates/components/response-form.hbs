@@ -1,1 +1,16 @@
-{{yield}}
+{{new-response  user=user setFileLocation='setFileLocation'}}
+
+{{#if responseForm}}
+
+  <label for="title">title</label>
+  {{input type='text' value=title}}
+
+  <label for="description">description</label>
+  {{input type='text' value=description}}
+
+  <label for="medium">medium</label>
+  {{input type='text' value=medium}}
+
+  <button {{action 'saveResponse'}}>Save</button>
+
+{{/if}}
