@@ -1,17 +1,19 @@
 <div class="original-post">
   <img src={{post.img}} alt={{post.description}}><br>
-  <form class="download-form" method="get" action="{{post.img}}">
-    <button type="submit">Download</button>
-  </form>
-  <div class="postNotes">
-    <p>
-      Title: {{post.title}}
-    </p>
-    <p>
-      Medium: {{post.medium}}
-    </p>
-    <p>
-      Notes: {{post.description}}
-    </p>
-  </div>
+  <div class="post-info">
+    <form class="download-form" method="get" action="{{post.img}}">
+      <button type="submit">Download</button>
+    </form>
+    <div class="postNotes">
+      <p>
+        Title: {{post.title}}
+      </p>
+      <p>
+        Medium: {{post.medium}}
+      </p>
+      <p>
+        Notes: {{post.description}}
+      </p>
+    </div>
+  </div> <!-- end post-info -->
 </div>

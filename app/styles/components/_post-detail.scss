@@ -10,6 +10,10 @@
     flex-flow: row;
     width: 100%;
     justify-content: space-around;
+    .post-info {
+      display: flex;
+      align-items: flex-end;
+    }
   }
   img {
     width: 100%;
@@ -27,7 +31,7 @@
     }
     @media screen and (min-width: 800px)  {
       border: 1px solid yellow;
-      width: 300px;
+      width: 50%;
     }
   }
 }
