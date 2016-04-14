@@ -1,11 +1,10 @@
-
 import EmberUploader from 'ember-uploader';
 import config from '../config/environment';
 import AWS from 'npm:aws-sdk';
 import Ember from 'ember';
 
 export default EmberUploader.FileField.extend({
-		filesDidChange: function() {	 
+		filesDidChange: function() {
 				var file = event.target.files[0];
 		    var size = file.size;
 		    var user = this.get('user');
@@ -15,7 +14,7 @@ export default EmberUploader.FileField.extend({
 					accessKeyId: config.AWS_ACCESS_KEY_ID,
 					secretAccessKey: config.AWS_SECRET_ACCESS_KEY,
 					region: 'us-west-2'
-				});	
+				});
 
 				var key = new Date(Date.now());
 				var numKey = key.valueOf();
@@ -36,7 +35,7 @@ export default EmberUploader.FileField.extend({
 				};
 				s3.upload(params, function(err, data) {
 				  if(err) {console.log(err, err.stack); } // an error occurred
-				  else    { console.log(data); 
+				  else    { console.log(data);
 						self.sendAction('setFileLocation', data.Location);
 				  }           // successful response
 

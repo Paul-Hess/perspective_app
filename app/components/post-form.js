@@ -11,6 +11,7 @@ export default Ember.Component.extend({
 		    savePost() {
 		      var params = {
 		        user:  this.get('user'),
+		        title: this.get('title'),
 		        description: this.get('description'),
 		        medium: this.get('medium'),
 		        img: this.get('fileLocation'),

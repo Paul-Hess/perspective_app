@@ -8,13 +8,13 @@ export default Ember.Route.extend({
       user: this.store.findRecord('user', params.user_id),
       post: this.store.findAll('post')
     }).then(function(model){
-      console.log(model.owner);
       if(model.currentUser === model.user.id) {
         model.owner = true;
+      console.log(model.owner);
       }
       return model;
     });
-  }, 
+  },
 
   actions: {
     savePost(params) {
