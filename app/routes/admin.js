@@ -8,6 +8,15 @@ export default Ember.Route.extend({
   actions: {
     deletePost(post) {
       post.destroyRecord();
+    },
+
+    saveCategory(title) {
+    	var newCategory = this.store.createRecord('category', {
+    		title: title
+    	});
+    	if(newCategory.save()) {
+    		console.log('saved properly' );
+    	}
     }
   }
 });

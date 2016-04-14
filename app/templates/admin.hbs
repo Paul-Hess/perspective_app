@@ -1,5 +1,6 @@
 
 <h1 class="sign">Admin</h1>
+{{new-category saveCategory='saveCategory'}}
 <div class="adminContainer">
   {{#each model as |post|}}
   {{admin-tile post=post deletePost="deletePost"}}
