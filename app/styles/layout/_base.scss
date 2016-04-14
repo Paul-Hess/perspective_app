@@ -23,6 +23,5 @@ body {
 }
 
 h1 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  letter-spacing: 3px;
+  @extend %headers;
 }

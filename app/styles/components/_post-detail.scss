@@ -3,7 +3,6 @@
   margin-top: 25px;
   display: flex;
   flex-flow: column;
-  border: 1px solid red;
   margin: 25px auto 0 auto;
   width: 98vw;
   max-width: 1300px;
@@ -19,11 +18,9 @@
   }
   .postNotes {
     margin: 5px;
-    border: 1px solid red;
     padding: 0 5px;
     p {
       margin: 5px;
-      border: 1px solid red;
       @media  screen and (min-width: 800px) {
         margin-top: 15px;
       }
@@ -39,11 +36,25 @@
   display: flex;
   flex-flow: column;
   justify-content: space-around;
-  border: 2px solid blue;
   width: auto;
   margin: 20px auto;
   max-width: 800px;
   padding: 5px;
+  button {
+    height: 25px;
+  }
+  h3 {
+    @extend %headers;
+  }
+  ul {
+    padding: 0px;
+  }
+  .comment {
+    margin: 0 5% 10% 5%;
+    .userName {
+      font-weight: bold;
+    }
+  }
   .newReview{
     align-self: center;
     text-align: center;
@@ -87,8 +98,4 @@
       height: 300px;
     }
   }
-}
-
-.comment {
-  border: 2px solid darkkhaki;
 }
