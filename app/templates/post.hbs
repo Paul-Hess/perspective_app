@@ -1,4 +1,6 @@
-{{post-details post=model}}
-{{edit-tile}}
+{{post-details post=model.post}}
 
-{{review-tile saveReview2="saveReview3" post=model}}
+{{edit-tile post=model.post user=model.user saveResponse="saveResponse"}}
+
+
+{{review-tile saveReview2="saveReview3" post=model.post user=model.user}}
