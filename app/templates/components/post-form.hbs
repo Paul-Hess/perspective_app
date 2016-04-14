@@ -1,0 +1,12 @@
+  {{new-post  user=user setFileLocation='setFileLocation'}}
+	{{#if postForm}}
+
+	  <label for="description">description</label>
+	  {{input type='text' value=description}}
+
+	  <label for="medium">medium</label>
+	  {{input type='text' value=medium}}
+
+	  <button {{action 'savePost'}}>Save</button>
+	{{/if}}
+

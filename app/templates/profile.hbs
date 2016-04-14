@@ -5,6 +5,8 @@
   {{/each}}
 </div>
 
+
+
 {{#if model.owner}}
-  {{new-post}}
+	{{post-form savePost='savePost' user=model.user}}
 {{/if}}
