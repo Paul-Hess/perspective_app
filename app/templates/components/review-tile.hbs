@@ -1,10 +1,6 @@
 <div class="reviews">
-  hey i'm a review. i review edits and original posts but don't post art.
-  i have a blue border
   {{#if addNewReview}}
     <form class="newReview">
-      <label for="title">Comment Title</label>
-      {{input value=title id="title"}} <br>
       <label for="body">Review</label>
       {{textarea value=body id="body"}} <br>
       <button {{action 'saveReview1' post}}>Save Review</button>
@@ -14,9 +10,10 @@
   {{/if}}
 
   <ul>
-      {{#each post.comments as |comment|}}
-        {{comment.title}}: {{comment.body}}
-        <br>
-      {{/each}}
+    {{#each post.comments as |comment|}}
+      <div class="comment">
+        {{comment.user.userName}}: {{comment.body}}
+      </div>
+    {{/each}}
   </ul>
 </div>

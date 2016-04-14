@@ -9,5 +9,6 @@ export default DS.Model.extend({
 	updatedAt: DS.attr(),
 	isAdmin: DS.attr(),
 	posts: DS.hasMany('post', {async: true}),
-	responses: DS.hasMany('response', {async: true})
+	responses: DS.hasMany('response', {async: true}),
+	comments: DS.hasMany('comment', {async: true})
 });
