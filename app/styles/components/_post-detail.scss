@@ -44,6 +44,17 @@
   margin: 20px auto;
   max-width: 800px;
   padding: 5px;
+  .newReview{
+    text-align: center;
+    label {
+      color: $text-color;
+      font-size: 1.2em;
+      padding: 5px;
+    }
+    button {
+      margin-bottom: 10px;
+    }
+  }
   .review-detail {
     border: 1px solid pink;
     padding: 5px;

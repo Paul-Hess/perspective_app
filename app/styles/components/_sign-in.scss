@@ -22,7 +22,9 @@ form {
   padding: 20px 0;
   background: rgba(204, 204, 204, 0.4);
   max-width: 600px;
-  input {
+  border: 1px solid pink;
+  input,
+  textarea {
     display: block;
     margin: 5px auto;
     width: 90%;
@@ -32,7 +34,6 @@ form {
     padding: 15px;
     @media screen and (min-width: 768px) {
       width: 50%;
-
     }
   }
 }
