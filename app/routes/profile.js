@@ -5,7 +5,8 @@ export default Ember.Route.extend({
      return Ember.RSVP.hash({
       owner: false,
       currentUser: this.get('session').get('uid'),
-      user: this.store.findRecord('user', params.user_id)
+      user: this.store.findRecord('user', params.user_id),
+      post: this.store.findAll('post')
     }).then(function(model){
       console.log(model.owner);
       if(model.currentUser === model.user.id) {
@@ -13,5 +14,17 @@ export default Ember.Route.extend({
       }
       return model;
     });
+  }, 
+
+  actions: {
+    savePost(params) {
+      var newPost = this.store.createRecord('post', params);
+      var user = params.user;
+      newPost.save().then(function() {
+        user.get('posts').addObject(newPost);
+        return user.save();
+      });
+    }
+
   }
 });
