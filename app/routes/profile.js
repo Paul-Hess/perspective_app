@@ -6,8 +6,7 @@ export default Ember.Route.extend({
      return Ember.RSVP.hash({
       owner: false,
       currentUser: this.get('session').get('uid'),
-      user: this.store.findRecord('user', params.user_id),
-      post: this.store.findAll('post')  
+      user: this.store.findRecord('user', params.user_id)
     }).then(function(model){
       if(model.currentUser === model.user.id) {
         model.owner = true;
@@ -25,7 +24,9 @@ export default Ember.Route.extend({
         user.get('posts').addObject(newPost);
         return user.save();
       });
-    }
-
+    },
+    deletePost(post) {
+        
+      }
   }
 });

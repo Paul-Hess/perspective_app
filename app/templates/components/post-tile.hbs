@@ -5,5 +5,8 @@
     {{post.title}}
   </div>
   {{/link-to}}
-
+  {{#if model.owner}}
+    <button {{action 'deletePost' post}}>Delete</button>
+    <button {{action 'updatePost' post}}>Update</button>
+  {{/if}}
 </div>

@@ -14,6 +14,7 @@ export default Ember.Controller.extend({
         controller.transitionToRoute('index');
       }, (error) => {
         console.log(error);
+        alert("there was an error with your login, please try again");
       });
     }
   }
