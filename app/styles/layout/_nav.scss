@@ -5,6 +5,10 @@ header {
   border-bottom: 1px solid black;
   margin-bottom: 20px;
   min-width: 300px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background: white;
   .social {
     display: flex;
     justify-content: flex-end;
@@ -23,13 +27,13 @@ header {
   #title {
     font-size: 2em;
     margin: 15px;
-    margin-bottom: 0px;
+    // margin-bottom: 0px;
     font-family: 'Open Sans Condensed', sans-serif;
     letter-spacing: 6px;
     font-style: italic;
     text-decoration: underline;
     @media screen and (min-width: 768px) {
-      font-size: 3em;
+      font-size: 4em;
     }
   }
 
@@ -53,8 +57,8 @@ header {
 }
 
 footer {
-  margin-top: 20px;
   text-align: center;
+  border-top: 1px solid $text-color;
   a {
     padding: 3px;
     display: block;

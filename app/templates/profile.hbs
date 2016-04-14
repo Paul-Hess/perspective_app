@@ -1,3 +1,6 @@
 {{#if model.owner}}
 	{{post-form savePost='savePost' user=model.user}}
 {{/if}}
+{{#each model.user.posts as |post|}}
+	{{post-tile post=post model=model deletePost='deletePost'}}
+{{/each}}
