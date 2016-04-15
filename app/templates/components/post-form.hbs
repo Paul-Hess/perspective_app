@@ -14,12 +14,13 @@
   <label for="category">categories</label>
   {{#x-select value="paintings" action="selectCategory"}}
   	{{#x-option value="paintings"}}paintings{{/x-option}}
-  	{{#x-option value="photoshop"}}photoshop{{/x-option}}
+  	{{#x-option value="photography"}}photography{{/x-option}}
   	{{#x-option value="sculpture"}}sculpture{{/x-option}}
   	{{#x-option value="collage"}}collage{{/x-option}}
   	{{#x-option value="video"}}video{{/x-option}}
-  	{{#x-option value="code"}}code screenshots{{/x-option}}
+  	{{#x-option value="pen"}}pen and ink{{/x-option}}
 		{{#x-option value="written"}}poetry and prose{{/x-option}}
+    {{#x-option value="other"}}other{{/x-option}}
 	{{/x-select}}
 
   <button {{action 'savePost'}}>Save</button>
