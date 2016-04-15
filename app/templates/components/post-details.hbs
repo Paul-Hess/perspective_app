@@ -1,9 +1,7 @@
 <div class="original-post">
   <img src={{post.img}} alt={{post.description}}><br>
   <div class="post-info">
-    <form class="download-form" method="get" action="{{post.img}}">
-      <button type="submit">Download</button>
-    </form>
+      <a href{{post.img}} download="post.title">Download</a>
     <div class="postNotes">
       <p>
         Title: {{post.title}}

@@ -28,14 +28,12 @@ export default Ember.Route.extend({
       });
     },
     deletePost(post) {
-      console.log("post object", post)
-        var self = this;
         AWS.config.update({
           accessKeyId: config.AWS_ACCESS_KEY_ID,
           seretAccessKey: config.AWS_SECRET_ACCESS_KEY,
           region: 'us-west-2'
         });
-        console.log('post key', post.key)
+        
         var params = {
           Bucket: 'redidit/images',
           Key: post.get('key')
@@ -51,7 +49,6 @@ export default Ember.Route.extend({
             });
             Ember.RSVP.all(response_deletions, comment_deletions).then(function() {
               return post.destroyRecord();
-              this.transitionTo('profile', params.user_id);
             }).then(function() {
           s3.deleteObject(params, function(err,data){
             if (err) {
@@ -59,9 +56,9 @@ export default Ember.Route.extend({
             } else {
               console.log(data);
             }
-        })
+          });
 
-         })
+          });
     }
   }
 });
