@@ -6,6 +6,7 @@
     width: 90%;
     margin: auto;
     .post-info {
+      margin-bottom: 20px;
       p {
         margin: 2px;
       }
@@ -13,6 +14,7 @@
         margin: 10px 0;
       }
       .post-notes {
+        padding-left: 17px;
         @media screen and (min-width: 800px) {
           display: flex;
           flex-flow: column;
@@ -20,6 +22,9 @@
       }
     }
     img {
+      max-width: 250px;
+      margin: auto;
+      display: block;
       @media screen and (min-width: 800px) {
         max-width: 300px;
       }
