@@ -9,7 +9,11 @@
   img {
     width: 100%;
     height: auto;
+    max-height: 800px;
     max-width: 800px;
+    @media screen and (min-width: 800px) {
+      margin: 0 5% 5% 5%;
+    }
   }
   @media screen and (min-width: 800px)  {
     flex-flow: row;
@@ -24,6 +28,9 @@
     margin: 5px;
     margin-bottom: 5%;
     padding: 0 5px;
+    button {
+      margin-top: 20px;
+    }
     p {
       margin: 5px;
       @media  screen and (min-width: 800px) {
@@ -31,8 +38,10 @@
       }
     }
     @media screen and (min-width: 800px)  {
-      border: 1px solid yellow;
       width: 50%;
+      button {
+        margin-top: 300px;
+      }
     }
   }
 }
