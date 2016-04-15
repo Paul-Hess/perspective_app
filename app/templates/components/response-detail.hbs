@@ -1,18 +1,17 @@
+<h3>Collaborations</h3>
 {{#each post.responses as |response|}}
-	<div class="original-post">
-		<img src="{{response.img}}">
-		<div class="post-info">
-			<div class="post-notes">
-		    <p>
-	        Title: {{response.title}}
-	      </p>
-	      <p>
-	        Medium: {{response.medium}}
-	      </p>
-	      <p>
-	        Notes: {{response.description}}
-	      </p>
-			</div>
-    </div>
-   </div>
+<div class="post-info">
+	<img class="response-img" src="{{response.img}}">
+	<div class="post-notes">
+		<p>
+			Title: {{response.title}}
+		</p>
+		<p>
+			Medium: {{response.medium}}
+		</p>
+		<p>
+			Notes: {{response.description}}
+		</p>
+	</div>
+</div>
 {{/each}}

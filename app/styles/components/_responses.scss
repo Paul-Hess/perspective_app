@@ -1,0 +1,28 @@
+
+  .response-detail {
+    margin: 20px;
+    display: flex;
+    flex-flow: row;
+    width: 90%;
+    margin: auto;
+    .post-info {
+      p {
+        margin: 2px;
+      }
+      @media screen and (min-width: 800px) {
+        margin: 10px 0;
+      }
+      .post-notes {
+        @media screen and (min-width: 800px) {
+          display: flex;
+          flex-flow: column;
+        }
+
+      }
+    }
+    img {
+      @media screen and (min-width: 800px) {
+        max-width: 300px;
+      }
+    }
+  }
