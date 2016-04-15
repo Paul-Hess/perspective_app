@@ -1,4 +1,6 @@
 import Ember from 'ember';
+import config from '../config/environment';
+import AWS from 'npm:aws-sdk';
 
 export default Ember.Route.extend({
   model(params) {
@@ -26,7 +28,36 @@ export default Ember.Route.extend({
       });
     },
     deletePost(post) {
-        
-      }
+        var params = {
+          Bucket: 'redidit/images',
+          Key: post.get('key')
+        };
+
+        AWS.config.update({
+          accessKeyId: config.AWS_ACCESS_KEY_ID,
+          seretAccessKey: config.AWS_SECRET_ACCESS_KEY,
+          region: 'us-west-2'
+        });
+        var s3 = new AWS.S3();
+
+            var response_deletions = post.get('responses').map(function(response) {
+              return response.destroyRecord();
+            });
+            var comment_deletions = post.get('comments').map(function(comment) {
+              return comment.destroyRecord();
+            });
+            Ember.RSVP.all(response_deletions, comment_deletions).then(function() {
+              return post.destroyRecord();
+            }).then(function() {
+          s3.deleteObject(params, function(err,data){
+            if (err) {
+              console.log(err, err.stack);
+            } else {
+              console.log(data);
+            }
+          });
+
+          });
+    }
   }
 });

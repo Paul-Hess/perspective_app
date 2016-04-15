@@ -1,0 +1,39 @@
+.reviews {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  width: auto;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 5px;
+  button {
+    height: 25px;
+    margin-top: 5px;
+  }
+  ul {
+    padding: 0px;
+  }
+  .comment {
+    margin: 0 5% 10% 5%;
+    .userName {
+      font-weight: bold;
+    }
+  }
+  .newReview{
+    align-self: center;
+    text-align: center;
+    label {
+      color: $text-color;
+      font-size: 1.2em;
+      padding: 5px;
+    }
+    button {
+      margin-bottom: 10px;
+    }
+  }
+  .review-detail {
+    border: 1px solid pink;
+    padding: 5px;
+    margin: 5px 0;
+  }
+}

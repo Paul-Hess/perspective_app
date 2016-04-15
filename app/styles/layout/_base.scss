@@ -22,7 +22,8 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: $font-brand;
-  letter-spacing: 3px;
+
+h1, h3 {
+  @extend %headers;
+
 }

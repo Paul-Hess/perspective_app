@@ -3,15 +3,19 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 			selection: '',
 	    fileLocation: '',
+	    key: '',
       postForm: false,
       actions: {
-	      setFileLocation(data) {
-		      this.set('fileLocation', data);
+	      setFileLocation(params2) {
+	      	console.log(params2);
+		      this.set('fileLocation', params2.fileLocation);
+		      this.set('key', params2.key);
 		      this.set('postForm', true);
 	    		},
 		    savePost() {
 		      var params = {
 		        user:  this.get('user'),
+		        key: this.get('key'),
 		        title: this.get('title'),
 		        description: this.get('description'),
 		        category: this.get('selection'),
@@ -23,7 +27,7 @@ export default Ember.Component.extend({
 		    },
 			  selectCategory(selection, component) {
 	      if (selection) {
-	        this.set('selection', selection)
+	        this.set('selection', selection);
 	      } else {
 	      	alert('this field is required, please select a category');
 	      }

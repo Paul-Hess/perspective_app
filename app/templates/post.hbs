@@ -1,5 +1,10 @@
-{{post-details post=model}}
-<!--should only be image and maybe the user name -->
-{{edit-tile}}
 
-{{review-tile saveReview2="saveReview3" post=model}}
+
+{{post-details post=model.post}}
+
+
+{{edit-tile post=model.post user=model.user saveResponse="saveResponse"}}
+
+
+{{review-tile saveReview2="saveReview3" post=model.post user=model.user}}
+

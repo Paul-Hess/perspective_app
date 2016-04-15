@@ -1,0 +1,39 @@
+.edit-post {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  @media screen and (min-width: 768px) {
+    flex-flow: row wrap;
+  }
+  .edit-detail {
+    width: 80%;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+    margin: 0px auto;
+    input, textarea {
+      width: 90%;
+      margin-bottom: 10px;
+      border: 1px solid lighten($nav-color, 40%);
+    }
+    button {
+      height: 25px;
+    }
+    @media screen and (min-width: 400px) {
+      width: auto;
+      height: 300px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 300px;
+      // height: auto; this will be auto when it is imgs.
+      height: 300px;
+    }
+  }
+}
+
+.add-collaboration {
+  display: flex;
+  justify-content: center;
+}

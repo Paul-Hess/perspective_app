@@ -3,88 +3,46 @@
   margin-top: 25px;
   display: flex;
   flex-flow: column;
-  border: 1px solid red;
   margin: 25px auto 0 auto;
   width: 98vw;
   max-width: 1300px;
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    max-width: 800px;
+    @media screen and (min-width: 800px) {
+      margin: 0 5% 5% 5%;
+      max-height: 900px;
+    }
+  }
   @media screen and (min-width: 800px)  {
     flex-flow: row;
     width: 100%;
     justify-content: space-around;
-  }
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 800px;
+    .post-info {
+      display: flex;
+      align-items: flex-end;
+    }
   }
   .postNotes {
     margin: 5px;
-    border: 1px solid red;
+    margin-bottom: 5%;
     padding: 0 5px;
+    button {
+      margin-top: 20px;
+    }
     p {
       margin: 5px;
-      border: 1px solid red;
       @media  screen and (min-width: 800px) {
         margin-top: 15px;
       }
     }
     @media screen and (min-width: 800px)  {
-      border: 1px solid yellow;
-      width: 300px;
-    }
-  }
-}
-
-.reviews {
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  border: 2px solid blue;
-  width: auto;
-  margin: 20px auto;
-  max-width: 800px;
-  padding: 5px;
-  .newReview{
-    align-self: center;
-    text-align: center;
-    label {
-      color: $text-color;
-      font-size: 1.2em;
-      padding: 5px;
-    }
-    button {
-      margin-bottom: 10px;
-    }
-  }
-  .review-detail {
-    border: 1px solid pink;
-    padding: 5px;
-    margin: 5px 0;
-  }
-}
-
-.edit-post {
-  max-width: 1300px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-around;
-  @media screen and (min-width: 768px) {
-    flex-flow: row wrap;
-  }
-  .edit-detail {
-    border: 2px solid green;
-    height: 250px;
-    width: auto;
-    margin: 20px;
-    @media screen and (min-width: 400px) {
-      width: auto;
-      height: 300px;
-    }
-    @media screen and (min-width: 768px) {
-      width: 300px;
-      // height: auto; this will be auto when it is imgs.
-      height: 300px;
+      width: 50%;
+      button {
+        margin-top: 300px;
+      }
     }
   }
 }
