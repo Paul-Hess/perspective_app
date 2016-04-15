@@ -8,10 +8,17 @@
     flex-flow: row wrap;
   }
   .edit-detail {
-    border: 2px solid green;
-    height: 250px;
-    width: auto;
-    margin: 20px;
+    width: 90%;
+    padding: 5px;
+    display: flex;
+    flex-flow: column;
+    input {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    button {
+      height: 25px;
+    }
     @media screen and (min-width: 400px) {
       width: auto;
       height: 300px;
@@ -22,4 +29,9 @@
       height: 300px;
     }
   }
+}
+
+.add-collaboration {
+  display: flex;
+  justify-content: center;
 }

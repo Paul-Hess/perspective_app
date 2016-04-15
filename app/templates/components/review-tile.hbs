@@ -1,4 +1,13 @@
 <div class="reviews">
+  <h3>Comments</h3>
+  <ul>
+    {{#each post.comments as |comment|}}
+    <div class="comment">
+      <span class="userName">{{comment.user.userName}}</span>: {{comment.body}}
+    </div>
+    {{/each}}
+  </ul>
+  
   {{#liquid-if addNewReview}}
     <form class="newReview">
       <label for="body">Review</label>
@@ -9,12 +18,4 @@
   <button {{action 'showReviewForm'}}>Leave a Review</button>
   {{/liquid-if}}
 
-  <h3>Comments:</h3>
-  <ul>
-    {{#each post.comments as |comment|}}
-      <div class="comment">
-        <span class="userName">{{comment.user.userName}}</span>: {{comment.body}}
-      </div>
-    {{/each}}
-  </ul>
 </div>
