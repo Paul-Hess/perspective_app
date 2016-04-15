@@ -35,9 +35,9 @@ export default Ember.Route.extend({
         };
 
         AWS.config.update({
-          accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
-          region: process.env.S3_REGION
+          accessKeyId: config.AWS_ACCESS_KEY_ID,
+          seretAccessKey: config.AWS_SECRET_ACCESS_KEY,
+          region: 'us-west-2'
         });
         var s3 = new AWS.S3();
 
