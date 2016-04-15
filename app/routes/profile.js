@@ -28,7 +28,6 @@ export default Ember.Route.extend({
       });
     },
     deletePost(post) {
-        
         var params = {
           Bucket: 'redidit/images',
           Key: post.get('key')

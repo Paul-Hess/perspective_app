@@ -16,6 +16,10 @@
   img {
     height: 200px;
     margin: 3px;
+    max-width: 425px;
+    @media screen and (min-width: 425px) {
+      margin: 10px auto;
+    }
   }
   img:nth-last-child(1) {
     display: none;
