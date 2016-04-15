@@ -25,3 +25,8 @@ body {
 h1, h3 {
   @extend %headers;
 }
+
+.newReview textarea {
+  width: 80%;
+  height: 200px;
+}
