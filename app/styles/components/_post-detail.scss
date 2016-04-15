@@ -6,6 +6,11 @@
   margin: 25px auto 0 auto;
   width: 98vw;
   max-width: 1300px;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+  }
   @media screen and (min-width: 800px)  {
     flex-flow: row;
     width: 100%;
@@ -15,13 +20,9 @@
       align-items: flex-end;
     }
   }
-  img {
-    width: 100%;
-    height: auto;
-    max-width: 800px;
-  }
   .postNotes {
     margin: 5px;
+    margin-bottom: 5%;
     padding: 0 5px;
     p {
       margin: 5px;

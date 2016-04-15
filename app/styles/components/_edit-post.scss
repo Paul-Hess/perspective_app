@@ -8,13 +8,15 @@
     flex-flow: row wrap;
   }
   .edit-detail {
-    width: 90%;
+    width: 80%;
     padding: 5px;
     display: flex;
     flex-flow: column;
-    input {
+    margin: 0px auto;
+    input, textarea {
       width: 90%;
       margin-bottom: 10px;
+      border: 1px solid lighten($nav-color, 40%);
     }
     button {
       height: 25px;
