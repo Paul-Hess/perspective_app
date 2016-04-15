@@ -15,7 +15,7 @@
   //   width: 100vw;
   //   height: 100vh;
   // }
-  @media screen and (max-width: 800px), (orientation: landscape) {
+  @media screen and (max-width: 800px){
     background: url("https://static.pexels.com/photos/29068/pexels-photo.jpg") center center;
     background-size: cover;
     .fullscreen-bg__video {
