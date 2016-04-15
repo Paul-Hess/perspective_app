@@ -10,9 +10,9 @@ export default EmberUploader.FileField.extend({
 		    var self = this;
 
 				AWS.config.update({
-					accessKeyId: config.AWS_ACCESS_KEY_ID,
-					secretAccessKey: config.AWS_SECRET_ACCESS_KEY,
-					region: 'us-west-2'
+					accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+					secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+					region: process.env.S3_REGION
 				});
 
 				var key = new Date(Date.now());
