@@ -35,13 +35,13 @@ export default Ember.Route.extend({
           seretAccessKey: config.AWS_SECRET_ACCESS_KEY,
           region: 'us-west-2'
         });
-        var s3 = new AWS.S3();
         console.log('post key', post.key)
         var params = {
-          Bucket: 'reddit/images',
+          Bucket: 'redidit/images',
           Key: post.get('key')
         };
 
+        var s3 = new AWS.S3();
 
             var response_deletions = post.get('responses').map(function(response) {
               return response.destroyRecord();
