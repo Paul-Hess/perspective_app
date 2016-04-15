@@ -28,17 +28,17 @@ export default Ember.Route.extend({
       });
     },
     deletePost(post) {
-        AWS.config.update({
-          accessKeyId: config.AWS_ACCESS_KEY_ID,
-          seretAccessKey: config.AWS_SECRET_ACCESS_KEY,
-          region: 'us-west-2'
-        });
         
         var params = {
           Bucket: 'redidit/images',
           Key: post.get('key')
         };
 
+        AWS.config.update({
+          accessKeyId: config.AWS_ACCESS_KEY_ID,
+          seretAccessKey: config.AWS_SECRET_ACCESS_KEY,
+          region: 'us-west-2'
+        });
         var s3 = new AWS.S3();
 
             var response_deletions = post.get('responses').map(function(response) {

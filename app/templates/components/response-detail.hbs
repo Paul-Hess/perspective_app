@@ -1,0 +1,18 @@
+{{#each post.responses as |response|}}
+	<div class="original-post">
+		<img src="{{response.img}}">
+		<div class="post-info">
+			<div class="post-notes">
+		    <p>
+	        Title: {{response.title}}
+	      </p>
+	      <p>
+	        Medium: {{response.medium}}
+	      </p>
+	      <p>
+	        Notes: {{response.description}}
+	      </p>
+			</div>
+    </div>
+   </div>
+{{/each}}
