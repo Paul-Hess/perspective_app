@@ -34,14 +34,14 @@ export default EmberUploader.FileField.extend({
 				  StorageClass: 'STANDARD'
 				};
 
-			
+
 				s3.upload(params, function(err, data) {
 				  if(err) {console.log(err, err.stack); } // an error occurred
 				  else    { console.log(data);
 				  		var params2 = {
 								fileLocation: data.Location,
 								key: data.key
-							}
+							};
 						self.sendAction('setFileLocation', params2);
 				  }           // successful response
 

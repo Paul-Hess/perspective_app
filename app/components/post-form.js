@@ -27,7 +27,7 @@ export default Ember.Component.extend({
 		    },
 			  selectCategory(selection, component) {
 	      if (selection) {
-	        this.set('selection', selection)
+	        this.set('selection', selection);
 	      } else {
 	      	alert('this field is required, please select a category');
 	      }
