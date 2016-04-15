@@ -2,7 +2,6 @@
 <div class="admin-tile">
   <!-- NOTE: user and catagory not appearing until the hasMany relationships are established.  -->
   User: {{post.user}} <br>
-  <span><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>(show number)</span>
   <img src={{post.img}} alt={{post.description}}><br>
   <div class="adminBtns">
     <button {{action 'deletePost' post}}>delete post</button>
