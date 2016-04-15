@@ -6,7 +6,9 @@
   </div>
   {{/link-to}}
   {{#if model.owner}}
+  <div class="post-button">
     <button {{action 'deletePost' post}}>Delete</button>
     <button {{action 'updatePost' post}}>Update</button>
+  </div>
   {{/if}}
 </div>
