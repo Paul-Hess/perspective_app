@@ -13,10 +13,13 @@
     <p>
       Notes: {{post.description}}
     </p>
-    <a href{{post.img}} download="{{post.title}}">Download</a>
+
+    <div class="download-btn">
+      <a href{{post.img}} download="post.title">Download</a>
+    </div>
   </div>
 </div>
 
 <div class="response-detail">
-  {{response-detail post=post}}
+    {{response-detail post=post}}
 </div>

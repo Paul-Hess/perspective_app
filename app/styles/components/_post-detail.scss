@@ -40,9 +40,27 @@
     }
     @media screen and (min-width: 800px)  {
       width: 50%;
-      button {
-        margin-top: 300px;
-      }
     }
+  }
+}
+
+.download-btn {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 3px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+  @media screen and (min-width: 800px) {
+    margin-top: 50%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 3px;
   }
 }
