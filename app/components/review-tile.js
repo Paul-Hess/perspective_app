@@ -10,12 +10,12 @@ export default Ember.Component.extend({
     saveReview1() {
       var params = {
         post: this.get('post'),
-        title: this.get('title'),
+        user: this.get('user'),
         body: this.get('body'),
       };
+      console.log(params);
       this.set('addNewReview', false);
-      this.set('title', ""),
-      this.set('body', ""),
+      this.set('body', "");
       this.sendAction('saveReview2', params);
     }
   }

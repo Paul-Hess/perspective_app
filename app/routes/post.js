@@ -9,10 +9,14 @@ export default Ember.Route.extend({
   },
   actions: {
     saveReview3(params) {
+      console.log(params);
       var newReview = this.store.createRecord('comment', params);
       var post = params.post;
-      post.get('comments').addObject(newReview);
+      var user = params.user;
       newReview.save().then(function() {
+        post.get('comments').addObject(newReview); //post gets a new comment
+        user.get('comments').addObject(newReview); //user gets a new comment
+        user.save();
         return post.save();
       });
     },

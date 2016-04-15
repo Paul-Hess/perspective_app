@@ -9,8 +9,10 @@
 }
 
 %button {
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: none;
   background: white;
   border: 1px solid $light-grey;
+  width: 150px;
+  height: 50px;
 }

@@ -26,7 +26,7 @@ export default EmberUploader.FileField.extend({
 				  Bucket: 'redidit/images', /* required */
 				  Key: finalKey, /* required */
 				  Expect: '100-continue',
-				  ACL: 'public-read',
+				  ACL: 'public-read-write',
 				  Body: file,
 				  contentType: file.type,
 				  contentLength: size,
