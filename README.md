@@ -38,7 +38,9 @@ paste in this code:
             	<AllowedHeader>*</AllowedHeader>
     	    </CORSRule>
 	    </CORSConfiguration>
-	in the grantee input type: your_variable_name
+
+
+* in the grantee input type: your_variable_name
 * give your grantee all the permissions
 * go to the AWS IAM Identity Access Management page console.aws.amazon.com/iam/home
 * click the users tab and create a new user under the same variable name that you gave permissions to in the bucket you created
