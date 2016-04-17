@@ -1,7 +1,7 @@
 # perspective
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+perspective is a collaborative community forum for artists to inspire and reconnect with the muse. Users can upload art to be recreated and reenvisioned by others, harboring creativity, communication, and fresh perspectives.
+perspective was created by David Remington, Gracie Lundell, Mao Thygesen, and Paul Hess.
 
 ## Prerequisites
 
@@ -20,32 +20,34 @@ del
 * `npm install`
 * `bower install`
 
-##For the AWS bucket installation: 
-	* go to aws.amazon.com and create an account or sign in to to console.
-	* navigate to simple storage services and create a bucket, make sure the bucket region is 'us-west-2'.
-	* in the bucket open the properties tab, then the permissions tab, then click 'add CORS configuration for bucket'
-	* paste in this code: 
-<?xml version="1.0" encoding="UTF-8"?>
-<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
-    <CORSRule>
-        <AllowedOrigin>http://*</AllowedOrigin>
-        <AllowedOrigin>https://*</AllowedOrigin>
-        <AllowedMethod>GET</AllowedMethod>
-        <AllowedMethod>PUT</AllowedMethod>
-        <AllowedMethod>POST</AllowedMethod>
-        <AllowedMethod>DELETE</AllowedMethod>
-        <AllowedHeader>*</AllowedHeader>
-    </CORSRule>
-</CORSConfiguration>
-* in the grantee input type <your_variable_name>
+## For the AWS bucket installation: 
+go to aws.amazon.com and create an account or sign in to to console.
+navigate to simple storage services and create a bucket, make sure the bucket region is 'us-west-2'.
+in the bucket open the properties tab, then the permissions tab, then click 'add CORS configuration for bucket' and 
+paste in this code: 
+
+    <?xml version="1.0" encoding="UTF-8"?>
+	    <CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+    	    <CORSRule>
+            	<AllowedOrigin>http://*</AllowedOrigin>
+            	<AllowedOrigin>https://*</AllowedOrigin>
+            	<AllowedMethod>GET</AllowedMethod>
+            	<AllowedMethod>PUT</AllowedMethod>
+            	<AllowedMethod>POST</AllowedMethod>
+            	<AllowedMethod>DELETE</AllowedMethod>
+            	<AllowedHeader>*</AllowedHeader>
+    	    </CORSRule>
+	    </CORSConfiguration>
+* in the grantee input type:
+	 <your_variable_name>
 * give your grantee all the permissions
 * go to the AWS IAM Identity Access Management page console.aws.amazon.com/iam/home
 * click the users tab and create a new user under the same variable name that you gave permissions to in the bucket you created
 * make sure to save the access key and secret key  for this user
 * in the root directory of your fork of this repo create a .env file
 * in that file:
-* export AWS_ACCESS_KEY_ID='ACCESS_KEY_YOU_JUST_CREATED_FOR_YOUR_USER'
-* export AWS_SECRET_ACCESS_KEY='SECRET_KEY_YOU_JUST_CREATED_FOR_YOUR_USER'
+	export AWS_ACCESS_KEY_ID='ACCESS_KEY_YOU_JUST_CREATED_FOR_YOUR_USER'
+	export AWS_SECRET_ACCESS_KEY='SECRET_KEY_YOU_JUST_CREATED_FOR_YOUR_USER'
 * open app/components/new-post.js and in the function titled filesDidChange() change the value of the first key in the params hash to a string equal to the name of the bucket you created in the AWS console
 * open app/components/new-response.js and do the same in that function titled filesDidChange().
 * open app/routes/profile.js and do the same in the function titled deletePost().
@@ -83,4 +85,7 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+
+## License 
+available for use under the MIT license
 
