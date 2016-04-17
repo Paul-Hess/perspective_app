@@ -1,27 +1,43 @@
+.response-detail {
+  @media screen and (min-width: 800px) {
+    h3 {
+      margin-left: 120px;
+    }
+  }
+}
 
-  .response-detail {
+
+  .response-detail2 {
     margin: 20px;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     width: 90%;
     margin: auto;
+    @media screen and (min-width: 800px) {
+      flex-flow: row;
+      align-items: center;
+    }
     .post-info {
+      margin: 30px;
+      margin-bottom: 20px;
+      @media screen and (min-width: 800px) {
+        display: flex;
+        flex-direction: column;
+      }
       p {
         margin: 2px;
       }
-      @media screen and (min-width: 800px) {
-        margin: 10px 0;
-      }
       .post-notes {
-        @media screen and (min-width: 800px) {
-          display: flex;
-          flex-flow: column;
-        }
+        padding-left: 17px;
       }
     }
     img {
+      max-width: 250px;
+      margin: auto;
+      display: block;
       @media screen and (min-width: 800px) {
         max-width: 300px;
+        margin-bottom: 20px;
       }
     }
   }

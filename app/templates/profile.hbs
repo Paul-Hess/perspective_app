@@ -1,12 +1,16 @@
-{{#if model.owner}}
-	<h3>Post your next perspective: </h3>
-	{{post-form savePost='savePost' user=model.user}}
-{{/if}}
+<div class="profile-wrapper">
+	{{#if model.owner}}
+		<h3>Post your next perspective: </h3>
+		{{post-form savePost='savePost' user=model.user}}
+	{{/if}}
 
-{{#if model.user.posts}}
-{{#each model.user.posts as |post|}}
-	{{post-tile post=post model=model deletePost='deletePost'}}
-{{/each}}
-{{else}}
-<h3>You don't have any posts yet, why don't you join in by adding one above.</h3>
-{{/if}}
+	{{#if model.user.posts}}
+	<div class="profile-posts">
+		{{#each model.user.posts as |post|}}
+			{{post-tile post=post model=model deletePost='deletePost'}}
+		{{/each}}
+	</div>
+	{{else}}
+	<h3>You don't have any posts yet, why don't you join in by adding one above.</h3>
+	{{/if}}
+</div>

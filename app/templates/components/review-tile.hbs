@@ -7,10 +7,9 @@
     </div>
     {{/each}}
   </ul>
-  
+
   {{#liquid-if addNewReview}}
     <form class="newReview">
-      <label for="body">Review</label>
       {{textarea value=body id="body"}} <br>
       <button {{action 'saveReview1' post}}>Save Review</button>
     </form>
