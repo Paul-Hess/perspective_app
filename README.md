@@ -12,7 +12,7 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
-del
+
 ## Installation
 
 * `git clone <repository-url>` this repository
@@ -40,11 +40,9 @@ paste in this code:
 	    </CORSConfiguration>
 
 
-* in the grantee input type: your_variable_name
-* give your grantee all the permissions
-* go to the AWS IAM Identity Access Management page console.aws.amazon.com/iam/home
-* click the users tab and create a new user under the same variable name that you gave permissions to in the bucket you created
-* make sure to save the access key and secret key  for this user
+* go to the AWS IAM [Identity Access Management page](console.aws.amazon.com/iam/home)
+* click the users tab and create a new user
+* make sure to save the access key and secret key for this user
 * in the root directory of your fork of this repo create a .env file
 * in that file:
 	export AWS_ACCESS_KEY_ID='ACCESS_KEY_YOU_JUST_CREATED_FOR_YOUR_USER'
