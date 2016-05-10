@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'redidit',
-    environment: "development",
+    environment: "production",
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
     firebase: 'https://imitatir.firebaseio.com/',
     torii: { sessionServiceName: 'session' },
