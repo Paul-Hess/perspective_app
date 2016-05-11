@@ -36,6 +36,8 @@ module.exports = function(deployTarget) {
 
   if (deployTarget === 'production') {
     ENV.build.environment = 'production';
+    ENV.AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
+    ENV.AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
     // configure other plugins for production deploy target here
   }
 
