@@ -45,8 +45,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
-    ENV.AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
+    ENV.AWS_ACCESS_KEY_ID = 'AKIAJ66PE7XTBH7QIN4Q';
+    ENV.AWS_SECRET_ACCESS_KEY = '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';
   }
 
   return ENV;
