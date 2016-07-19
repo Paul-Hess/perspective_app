@@ -1,7 +1,7 @@
 
 <div class="sign-up">
   <div class="fullscreen-bg">
-    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+    <video loop muted autoplay poster="https://s3-us-west-2.amazonaws.com/redidit/static/Draw-Something.mp4" class="fullscreen-bg__video">
       <source src="/assets/images/Draw-Something.mp4" type="video/mp4">
       </video>
     </div>
@@ -11,8 +11,8 @@
     {{input type='text' value=firstName placeholder='first name'}}
     {{input type='text' value=lastName placeholder='last name'}}
     {{input type='text' value=email placeholder='email'}}
-    {{input type='text' value=password placeholder='password'}}
-    {{input type='text' value=passwordCheck placeholder='confirm password'}}
+    {{input type='password' value=password placeholder='password'}}
+    {{input type='password' value=passwordCheck placeholder='confirm password'}}
     <button {{action 'signUp'}}>{{fa-icon 'plus-square-o'}} Sign Up</button>
   </form>
 </div>

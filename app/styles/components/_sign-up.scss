@@ -9,18 +9,11 @@
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  // @media screen and (min-width: 768px ) {
-  //   overflow: hidden;
-  //   position: fixed;
-  //   width: 100vw;
-  //   height: 100vh;
-  // }
-  @media screen and (max-width: 800px){
-    background: url("https://static.pexels.com/photos/29068/pexels-photo.jpg") center center;
-    background-size: cover;
-    .fullscreen-bg__video {
-      display: none;
-    }
+  @media screen and (min-width: 768px ) {
+    overflow: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
   }
 }
 

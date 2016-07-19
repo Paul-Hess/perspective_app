@@ -1,7 +1,7 @@
 .sign-in {
   margin-top: -200px;
-  background: url("/assets/images/old-man.jpeg") center center;
-  background-size: cover;
+  background: url("https://s3-us-west-2.amazonaws.com/redidit/static/old-man.jpeg") 50% 15% no-repeat;
+  background-size: contain;
   background-attachment: fixed;
   opacity: 0.8;
   height: 97vh;
@@ -10,7 +10,6 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   position: fixed;
   @media screen and (min-width: 350px ) {
     margin-top: -225px;
@@ -26,7 +25,7 @@
 
 .sign {
   text-align: center;
-  color: $text_color;
+  color: $text-color;
 }
 button {
   @extend %button;
